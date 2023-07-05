@@ -1,0 +1,85 @@
+header{
+    /* border:2px solid red; */
+    padding-top: 2rem;
+    height: 120vh;
+    overflow: hidden;
+}
+.header_container{
+    /* border: 2px solid green; */
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+.cta{
+    margin-top: 2rem;
+    /* border: 2px seagreen solid; */
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+.socials{
+    /* border: 2px red solid; */
+    position: absolute;
+    left: 2rem;
+    display:flex;
+    flex-direction: column;
+    gap:0.7rem;
+    align-items: center;
+    bottom: 10rem;
+}
+.socials::after{
+    content: "";
+    width: 2px;
+    height: 2rem;
+    background-color: var(--color-primary);
+}
+
+.me{
+    background:linear-gradient(var(--color-primary),transparent);
+    width: 22rem;
+    height: 30rem;
+    position: absolute;
+    left: calc(50% - 11rem);
+    margin-top: 2rem;
+    border-radius: 12rem 12rem 0 0;
+    padding: 4rem 1.5rem 1.5rem 1.5rem;
+}
+.scroll__down{
+    position:absolute;
+    right: 3rem;
+    transform: rotate(90deg);
+    bottom: 14rem;
+}
+@media screen and (max-width: 1024px) {
+    header{
+        height: 200vh;;
+    }
+    .scroll__down{
+        right: .4rem;
+        bottom: 12rem;
+    }
+}
+@media screen and (max-width: 600px){
+    header{
+        height: 120vh;
+    }
+    .header_container{
+        height: 100%;
+    }
+    .socials{
+        position: static;
+        display: inline;
+    }
+    .mb-icons{
+        margin: 1rem;
+    }
+    .scroll__down{
+        position: static;
+        display: block;
+        transform: rotate(0deg);
+    }
+    .me{
+        height:20rem
+    }
+}
